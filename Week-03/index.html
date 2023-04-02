@@ -78,7 +78,9 @@
                     Donec egestas ligula lacus, nec eleifend odio tempor vel. 
                     Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus dignissim imperdiet
                 </p>
-                <button type="button">Learn more</button>
+                <button type="button">
+                    <a href="#more-content">Learn more</a>
+                </button>
             </div>
             <div class="image">
                 <img src="assets/imgs/mega-rocket.png" alt="mega-rocket-img"> 
@@ -153,42 +155,50 @@
             </div>
         </section>
         <!-- contact section -->
-        <section>
+        <section class="contact">
             <h2>
                 Contact
             </h2>
             <form>
-                <label for="name">
-                    Name
-                </label>
-                <input type="text" id="name" name="name" placeholder="Write here">
-                <label for="lname">
-                    Last name
-                </label>
-                <input type="text" id="lname" name="lname" placeholder="Write here">
-                <label for="email">
-                    Email
-                </label>
-                <input type="text" id="email" name="email" placeholder="Write herprecios de membresiase">
-                <label for="contact">
-                    Contact reason
-                </label>
-                <input list="reason" id="contact" name="contact" placeholder="Choose">
+                <div class="name">
+                    <label>
+                        Name
+                    </label>
+                    <input type="text" id="name" name="name" placeholder="Write here">
+                </div>
+                <div class="lname">
+                    <label>
+                        Last name
+                    </label>
+                    <input type="text" id="lname" name="lname" placeholder="Write here">
+                </div>
+                <div class="email">
+                    <label>
+                        Email
+                    </label>
+                    <input type="text" id="email" name="email" placeholder="Write here">
+                </div>
+                <div class="contact">
+                    <label>
+                        Contact reason
+                    </label>
+                    <input type="text" list="reason" id="contact" name="contact" placeholder="Choose">
                     <datalist id="reason" >
                         <option value="I want to know about membership and cost">
                         <option value="I want to make a question or suggestion">
                         <option value="I want to make a contact">
-                    </datalist>
-                <label>
-                    Message
-                </label>
-                <textarea rows="3" cols="25">
-                    Write here
-                </textarea>
-                <button type="button">
+                    </datalist> 
+                </div>
+                <div class="message">
+                    <label>
+                        Message
+                    </label>
+                    <textarea placeholder="Write here"></textarea>
+                </div>
+                <button type="button" id="button-clear">
                     Clear
                 </button>
-                <button type="button">
+                <button type="button" id="button-send">
                     Send It
                 </button>
             </form>
@@ -234,7 +244,7 @@
             </div> 
         </section>
         <!-- more content section -->
-        <section class="more-content">
+        <section class="more-content" id="more-content">
             <div class="box">
                 <div class="image">
                     <img src="assets/imgs/activities.png" alt="activities">

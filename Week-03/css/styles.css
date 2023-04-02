@@ -1,5 +1,4 @@
   
-
 body{
   background-color: #f4f4f4;
   color: #373867;
@@ -86,12 +85,16 @@ header .icon-menu img{
   margin-top: 50px;
   background-color: #AACE9B;
   border: none;
-  color: #373867;
   padding: 10px 25px; 
   font-size: 16px; 
   border-radius: 5px;
   font-weight: bolder;
   cursor: pointer;
+}
+
+.welcome .text button a {
+  text-decoration: none;
+  color: #373867;
 }
 
 /*---App features and More content---*/
@@ -157,7 +160,71 @@ header .icon-menu img{
   margin: 50px;
   width: 120px;
   margin-bottom: 70px;
+}
 
+/*---contact---*/
+
+.contact {
+  width: auto;
+  overflow: hidden;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+label{
+  display: block;
+}
+
+form .name,.lname {
+  width: 470px;
+  float: left;
+  margin-right: 10px;
+}
+
+input{
+  height: 30px;
+  color: #373867;
+  border: 1px solid #373867;
+  border-radius: 4px;
+  background-color: #f4f4f4;
+}
+
+#name,#lname,#email{
+  width: 450px;
+}
+
+#contact{
+  width: 700px;
+}
+
+textarea {
+  width: 1410px;
+  height: 200px;
+  border: 2px solid #DDE1E3;
+  background-color: #f4f4f4;
+}
+
+::placeholder{
+  color: #9999a6;
+}
+
+button {
+  padding: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 30PX;
+  margin-right: 50px;
+  border-radius: 5px;
+  border: 1px solid #373867;
+  color: #373867;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#button-send {
+  background-color: #AACE9B;
+  border: none;
+  font-weight: bolder;
 }
 
 /*---history-origin-mision---*/
@@ -166,7 +233,11 @@ header .icon-menu img{
   width: auto;
   overflow: hidden;
   margin-bottom: 50px;
+  padding-bottom: 50px;
   margin-top: 50px;
+  padding-top: 50px;
+  border-top: 1px solid #DDE1E3;
+  border-bottom: 1px solid #DDE1E3;
 }
 
 .history p{
@@ -218,7 +289,6 @@ header .icon-menu img{
 
 .pagination ul{
   display: inline-block;
-
 }
 
 .pagination li {
@@ -226,7 +296,7 @@ header .icon-menu img{
   margin: 10px;
   padding: 10px;
   list-style:none;
-  border: 1px solid #373867;
+  border: 2px solid #AACE9B;
   border-radius: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
@@ -235,8 +305,7 @@ header .icon-menu img{
 
 .pagination a {
   text-decoration: none;
-  color: #373867;
-  
+  color: #AACE9B;
 }
 
 footer{
