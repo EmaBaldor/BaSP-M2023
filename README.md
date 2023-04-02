@@ -11,7 +11,11 @@ Progress by weeks:
 We layout the website in **Figma**. We work on styles, screens, functionalities and flows.
 
 ## *Week 02*
-We build the landing page in html emphasizing the structure, syntax, basic tags, semantic elements. Then we upload it to a **Github** repository.
+We build the landing page in **HTML** emphasizing the structure, syntax, basic tags, semantic elements. Then we upload it to a **Github** repository.
+
+## *Week 03*
+We recreate the landing page with **CSS** styles
+without the sidebar and without using flexbox, grid, measures in percentages and absolute position.
 
 ## Authors
 Emanuel Baldor Bacarini
