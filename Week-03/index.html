@@ -7,6 +7,7 @@
     <title>
         Mega Rocket GYM
     </title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +34,7 @@
     </header>
     <main>
         <!-- menu - navigation bar -->
-        <aside class="sidebar">
+        <div class="sidebar">
             <input type="search" id="gsearch" name="Search" placeholder="Search">
             <h4>
                 Menu:
@@ -60,7 +61,7 @@
             <a>54-341-xxxxxxxxx</a>
             <img src="assets/imgs/address.png" alt="address">
             <address>AAA xxx, Rosario, Argentina, CP 2000</address>
-        </aside>
+        </div>
         <!-- content section -->
         <section class="welcome">
             <div class="text">
@@ -227,67 +228,92 @@
             <img src="assets/imgs/dumbbells-2.png" alt="dumbbells-2">
         </section>
         <!-- more content section -->
-        <section>
-            <h2>
-                More content
-            </h2>
-            <img src="assets/imgs/activities.png" alt="activities">
-            <h3>
-                Activities
-            </h3>
-            <ol>
-                <li>Crossfit</li>
-                <li>Spinning</li>
-                <li>Functional</li>
-                <li>Boxing</li>
-                <li>Fitness</li>
-            </ol> 
-            <img src="assets/imgs/black-membership.png" alt="black-membership">
-            <h3>
-                Black Membership
-            </h3>
-            <ol>
-                <li>Free pass to the weight room</li>
-                <li>Free pass to the lessons (previously enrolled)</li>
-                <li>Personalized follow up by a trainer</li>
-                <li>Grid visualization</li>
-            </ol>  
-            <img src="assets/imgs/classic-membership.png" alt="classic-membership">
-            <h3>
-                Classic Membership
-            </h3>
-            <ol>
-                <li>Free pass to the weight room</li>
-                <li>Personalized follow up by a trainer</li>
-                <li>Grid visualization</li>
-            </ol> 
-            <img src="assets/imgs/only-classes-membership.png" alt="only-classes-membership">
-            <h3>
-                Only Classes Membership
-            </h3>
-            <ol>
-                <li>Free pass to the weight room</li>
-                <li>Grid visualization</li>
-            </ol>
+        <section class="more-content">
+            <div class="box">
+                <div class="image">
+                    <img src="assets/imgs/activities.png" alt="activities">
+                </div>
+                <div class="text">
+                    <h3>
+                        Activities
+                    </h3>
+                    <ol>
+                        <li>Crossfit</li>
+                        <li>Spinning</li>
+                        <li>Functional</li>
+                        <li>Boxing</li>
+                        <li>Fitness</li>
+                    </ol> 
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="assets/imgs/black-membership.png" alt="black-membership">
+                </div>
+                <div class="text">
+                    <h3>
+                        Black Membership
+                    </h3>
+                    <ol>
+                        <li>Free pass to the weight room</li>
+                        <li>Free pass to the lessons (previously enrolled)</li>
+                        <li>Personalized follow up by a trainer</li>
+                        <li>Grid visualization</li>
+                    </ol>  
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="assets/imgs/classic-membership.png" alt="classic-membership">
+                </div>
+                <div class="text">
+                    <h3>
+                        Classic Membership
+                    </h3>
+                    <ol>
+                        <li>Free pass to the weight room</li>
+                        <li>Personalized follow up by a trainer</li>
+                        <li>Grid visualization</li>
+                    </ol>  
+                </div>
+            </div>            
+            <div class="box">
+                <div class="image">
+                    <img src="assets/imgs/only-classes-membership.png" alt="only-classes-membership">
+                </div>
+                <div class="text">
+                    <h3>
+                        Only Classes Membership
+                    </h3>
+                    <ol>
+                        <li>Free pass to the weight room</li>
+                        <li>Grid visualization</li>
+                    </ol>
+                </div>
+            </div>  
         </section>
-        <ul>
-            <li><a href="#">PREV</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">...</a></li>
-            <li><a href="#">NEXT</a></li>
-        </ul>
+        <div class="pagination">
+            <ul>
+                <li><a href="#">PREV</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">NEXT</a></li>
+            </ul>
+        </div>
     </main>
     <!-- footer section -->
     <footer>
-        <a href=""><img src="assets/imgs/linkedin.png" alt="linkedin"></a>
-        <a href=""><img src="assets/imgs/twitter.png" alt="twitter"></a>
-        <a href=""><img src="assets/imgs/facebook.png" alt="facebook"></a> 
-        <a href=""><img src="assets/imgs/instagram.png" alt="instagram"></a>
-        <a href=""><img src="assets/imgs/github.png" alt="github"></a>  
+        <div class="icons">
+            <a href=""><img src="assets/imgs/linkedin.png" alt="linkedin"></a>
+            <a href=""><img src="assets/imgs/twitter.png" alt="twitter"></a>
+            <a href=""><img src="assets/imgs/facebook.png" alt="facebook"></a> 
+            <a href=""><img src="assets/imgs/instagram.png" alt="instagram"></a>
+            <a href=""><img src="assets/imgs/github.png" alt="github"></a>  
+        </div>
         <address>
             Rosario, Argentina
         </address>
