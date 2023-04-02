@@ -78,7 +78,7 @@ header .icon-menu img{
   padding-top: 60px;
   font-size: 20px;
   letter-spacing: 1.5px;
-  width: 600px;
+  width: 620px;
   opacity: 0.4;
 }
 
@@ -160,6 +160,56 @@ header .icon-menu img{
 
 }
 
+/*---history-origin-mision---*/
+
+.history-origin-mision {
+  width: auto;
+  overflow: hidden;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.history p{
+  padding-left: 20px;
+  border-left: 7px solid #373867;
+  margin-bottom: 50px;
+}
+
+.origin{
+  width: 650px;
+  float: left;
+  margin-bottom: 40px;
+  margin-right: 80px;
+}
+
+.origin p{
+  border-bottom: 2px solid #373867;
+  padding-bottom: 20px;
+}
+
+.origin img{
+  width: 650px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.mision img{
+  width: 650px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.mision{
+  width: 650px;
+  float: left;
+  padding-left: 0px;
+}
+
+.mision p{
+  border-top: 2px solid #373867;
+  padding-top: 20px;
+}
+
 /*---Pagination---*/
 
 .pagination {
@@ -168,6 +218,7 @@ header .icon-menu img{
 
 .pagination ul{
   display: inline-block;
+
 }
 
 .pagination li {
@@ -175,4 +226,19 @@ header .icon-menu img{
   margin: 10px;
   padding: 10px;
   list-style:none;
+  border: 1px solid #373867;
+  border-radius: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  cursor: pointer;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #373867;
+  
+}
+
+footer{
+  text-align: center; 
 }
