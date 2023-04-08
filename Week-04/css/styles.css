@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 7px solid rgb(170, 206, 155);
+  border: 1px solid red;
+}
+
+.sidebar{
+  display: none;
+}
+
+body{
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: rgb(255, 255, 255);
+  color:rgb(55, 56, 103);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6em;
+  border: 1px solid red;
+}
+
+footer{
+  text-align: center; 
+  border: 1px solid red;
+}
