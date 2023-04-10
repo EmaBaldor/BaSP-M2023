@@ -4,6 +4,14 @@
   margin: 0;
 }
 
+html{
+  color:rgb(55, 56, 103);
+  background-color: rgb(255, 255, 255);
+  line-height: 1.6em;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
 header{
   display: flex;
   align-items: center;
@@ -12,21 +20,118 @@ header{
   border: 1px solid red;
 }
 
-.sidebar{
-  display: none;
+#icon-menu {
+  margin-right: auto;
+  border: 1px solid red;
+}
+
+#icon-menu img{
+  width: 30px;
+  height: auto;
+  margin: 10px
+}
+
+header .title {
+  flex:1;
+  justify-content: center;
+  text-align: center;
+  color: rgba(55, 56, 103, 0.4);
+  font-size: 0.8rem;
+}
+
+header .icons {
+  margin-left: auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  border: 1px solid red;
+}
+
+header .icons img{
+  width: 25px;
+  height: auto;
+  margin: 5px;
+  border: 1px solid red;
 }
 
 body{
-  margin-left: 50px;
-  margin-right: 50px;
-  background-color: rgb(255, 255, 255);
-  color:rgb(55, 56, 103);
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6em;
+  margin-left: 10px;
+  margin-right: 10px;
+  min-width: 450px;
   border: 1px solid red;
+}
+
+
+#sidebar{
+  display: none;
+}
+
+#home{
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding-top: 30px;
+  margin-bottom: 40px;
+  background: rgba(170, 206, 155, 0.1);
+}
+
+#welcome{
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+}
+
+#welcome img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid red;
+}
+
+#history-origin-mision img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid red;
+}
+/*
+body section{
+  display: flex;
+  align-content: space-around;
+  border: 1px solid red;
+}
+
+.box{
+  display: flex;
+  flex-direction: column;
+}
+
+#welcome .image {
+  width: 100%;
+  height: auto;
+}
+
+#history-origin-mision{
+  display: flex;
+  flex-direction: column;
 }
 
 footer{
   text-align: center; 
   border: 1px solid red;
 }
+*/
+
+/*
+
+@media (max-width: 390px) {
+  .title {
+    font-size: 0.8rem;
+  }
+  header .icons img{
+    width: 0px;
+    height: auto;
+  }
+}
+
+*/
