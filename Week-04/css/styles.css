@@ -11,47 +11,10 @@ html{
   font-family: 'Roboto', sans-serif;
 }
 
-header{
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: space-between;
-  border-bottom: 7px solid rgb(170, 206, 155);
-}
-
-#icon-menu {
-  margin-right: auto;
-}
-
-#icon-menu img{
-  width: 40px;
-  height: auto;
-  margin: 10px;
-}
-
-header .title {
-  flex:1;
-  justify-content: center;
-  text-align:justify;
-  color: rgba(55, 56, 103, 0.4);
-  font-size: 0.7rem;
-  padding: 10px;
-}
-
-header .icons {
-  padding-right: 10px;
-}
-
-header .icons img{
-  width: 23px;
-  margin: 5px;
-}
-
 body{
   margin-left: 10px;
   margin-right: 10px;
   min-width: 450px;
-  border: 1px solid red;
 }
 
 #sidebar{
@@ -61,6 +24,14 @@ body{
 #home{
   display: flex;
   background: rgba(170, 206, 155, 0.1);
+}
+
+#search {
+  width: 100%;
+  padding-left: 30px;
+  background-image: url("/assets/imgs/search.png"); 
+  background-repeat: no-repeat; 
+  background-position: 5px center; 
 }
 
 #welcome{
@@ -126,11 +97,12 @@ body{
 }
 
 #features .title{
-  width: 45%;
+  width: 200px;
   margin-bottom: 50px;
   padding-bottom: 10px;
   border-bottom: 4px solid rgb(170, 206, 155);
   font-size: 1.2rem;
+  white-space: nowrap;
 }
 
 .box {
@@ -160,12 +132,16 @@ body{
   padding: 2%;
   padding-right: 6%;
   width: 300px;
-  border: 1px solid red;
+}
+
+.box .text h3{
+  text-align: left;
 }
 
 .box .text ol{
   font-size: 14px;
   line-height : 20px;
+  text-align: left;
 }
 
 #contact-form {
@@ -342,29 +318,6 @@ input,textarea::placeholder {
   text-decoration: none;
 }
 
-footer{
-  text-align: center; 
-}
-
-footer .icons img{
-  width: 30px;
-  margin: 5px;
-}
-
-footer .icons{
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-footer address{
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-footer p{
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
 
 
 @media only screen and (min-width: 601px) {
@@ -450,7 +403,7 @@ footer p{
     padding: 50px;
     background-color: unset;
     background-color: rgba(32, 32, 32, 0.45);
-    background-image: url("../assets/imgs/mega-rocket.png");
+    background-image: url("../../assets/imgs/mega-rocket.png");
     background-blend-mode: overlay;
     background-size: cover;
   }
@@ -499,9 +452,9 @@ footer p{
       flex-direction: column;
       align-items: flex-start;
       width: 30%;
-      padding: 30px;
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding: 3%;
+      padding-top: 5%;
+      padding-bottom: 5%;
       background-color: rgba(170, 206, 155, 0.1);
   }
 
@@ -535,6 +488,7 @@ footer p{
   }
 
   .item h2{
+    width: 80px;
     margin-right: 80%;
     padding-bottom: 5px;
     margin-bottom: 10px;
@@ -543,6 +497,7 @@ footer p{
   }
 
   .item h3{
+    width: 150px;
     white-space: nowrap;
     margin-right: 60%;
     padding-bottom: 5px;
@@ -580,6 +535,11 @@ footer p{
     flex-basis: 48%;
     box-sizing: border-box;
     padding: 10px;
+  }
+
+  .container .box .image{
+    padding-right: 0px;
+    text-align: center;
   }
 
   #features{
@@ -633,13 +593,16 @@ footer p{
 
  .box-content{
     width: 100%;
-    padding: 2%;
+    padding-right: 1%;
     padding-left: 0;
   }
 
-  #origin-mision img{
-    padding: 5%;
-    padding-left: 12%;
+  .box-content .text{
+    width: 90%;
+  }
+
+  .pagination a{
+    padding: 1%;
   }
 
   .pagination li:nth-child(5), .pagination li:nth-child(6) {
