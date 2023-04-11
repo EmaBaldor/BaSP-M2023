@@ -120,8 +120,9 @@ body{
   font-size: 2rem;
 }
 
-#features .box img {
+#features .box .image {
   width: 30%;
+  padding: 2%;
 }
 
 #features .title{
@@ -130,7 +131,6 @@ body{
   padding-bottom: 10px;
   border-bottom: 4px solid rgb(170, 206, 155);
   font-size: 1.2rem;
-
 }
 
 .box {
@@ -153,8 +153,14 @@ body{
 }
 
 .box img {
-  width: 30%;
   margin-bottom: 20px;
+}
+
+.box .text{
+  padding: 2%;
+  padding-right: 6%;
+  width: 300px;
+  border: 1px solid red;
 }
 
 .box .text ol{
@@ -361,7 +367,7 @@ footer p{
 }
 
 
-@media screen and (min-width: 601px) {
+@media only screen and (min-width: 601px) {
 
 
   #welcome{
@@ -369,12 +375,50 @@ footer p{
     flex-direction: column;
   }
 
+  #welcome h2{
+    order:1;
+  }
 
+  #welcome h3{
+    order:2;
+  }
+
+  #welcome p{
+    order:3;
+    padding-bottom: 2%;
+  }
+
+  #welcome img{
+    order:4;
+  }
+
+  #welcome button{
+    order:5;
+  }
+  
+ #features .container .box{
+    display: flex;
+    flex-direction: row;
+  }
+
+  #more-content .container .box{
+    display: flex;
+    flex-direction: row;
+  }
+
+  #more-content .container .box .image{
+    padding: 2%;
+    padding-right: 6%;
+  }
+
+  #contact-form .button{
+    display: inline-block;
+  }
 
 
 }
 
- @media screen and (min-width: 1025px) {
+@media only screen and (min-width: 1025px) {
 
   body{
       margin-left: 50px;
@@ -405,21 +449,25 @@ footer p{
     margin-top: 30px;
     padding: 50px;
     background-color: unset;
-    background-image: url("/../assets/imgs/mega-rocket.png");
+    background-color: rgba(32, 32, 32, 0.45);
+    background-image: url("../assets/imgs/mega-rocket.png");
+    background-blend-mode: overlay;
     background-size: cover;
   }
-  
+
   #welcome h3{
     color: rgb(255, 255, 255);
     opacity: 1;
     font-size: 3rem;
   }
+
   #welcome h2{
     margin-top: 50px;
     color: rgb(255, 255, 255);
     opacity: 1;
     font-size: 4rem;
   }
+
   #welcome p{
     margin: 50px;
     margin-left: 0;
@@ -554,6 +602,7 @@ footer p{
     width: 33%;
     padding-right: 1%;
   }
+
   #contact-form #contact-list{
     width: 50%;
   }
@@ -593,7 +642,8 @@ footer p{
     padding-left: 12%;
   }
 
-    .pagination li:nth-child(5), .pagination li:nth-child(6) {
+  .pagination li:nth-child(5), .pagination li:nth-child(6) {
     display: list-item;
-    }
+  }
+
   }
