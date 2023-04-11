@@ -44,7 +44,6 @@ header .icons {
 
 header .icons img{
   width: 23px;
-  height: auto;
   margin: 5px;
 }
 
@@ -53,6 +52,10 @@ body{
   margin-right: 10px;
   min-width: 450px;
   border: 1px solid red;
+}
+
+img {
+  max-width: 800px;
 }
 
 #sidebar{
@@ -102,6 +105,18 @@ body{
   margin-top: 50px;
   padding-top: 50px;
   border-top: 2px solid rgb(227,221,221);
+}
+
+#features p{
+  font-size: 1rem;
+}
+
+#features h3 {
+  font-size: 2rem;
+}
+
+#features .box img {
+  width: 30%;
 }
 
 #features .title{
@@ -195,7 +210,7 @@ input,textarea::placeholder {
 }
 
 #contact-form button {
-  width: 30%;
+  width: 120px;
   padding: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -254,32 +269,88 @@ input,textarea::placeholder {
   color: rgb(55, 56, 103);
 }
 
-/*
-body section{
-  display: flex;
-  align-content: space-around;
-  border: 1px solid red;
-}
-
-.box{
+#more-content{
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
 }
 
-#welcome .image {
-  width: 100%;
-  height: auto;
-}
-
-#history-origin-mision{
+#more-content .box{
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#more-content ol {
+  list-style-position: inside;
+  font-size: 1rem;
+}
+
+#more-content h3 {
+  font-size: 2rem;
+}
+
+#more-content .box img {
+  width: 80%;
+}
+
+.pagination {
+  text-align: center; 
+  padding-bottom: 50px;
+  border-bottom: 7px solid rgb(170, 206, 155);
+}
+
+.pagination ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.pagination li {
+  margin: 10px;
+  padding: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border: 2px solid rgb(170, 206, 155);
+  border-radius: 5px;
+  list-style:none;
+  cursor: pointer;
+}
+
+.pagination a {
+  color:rgb(170, 206, 155);
+  text-decoration: none;
 }
 
 footer{
   text-align: center; 
-  border: 1px solid red;
 }
+
+footer .icons img{
+  width: 30px;
+  margin: 5px;
+}
+
+footer .icons{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+footer address{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+footer p{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/*
+
+
 */
 
 /*
