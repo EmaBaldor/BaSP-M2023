@@ -54,10 +54,6 @@ body{
   border: 1px solid red;
 }
 
-img {
-  max-width: 800px;
-}
-
 #sidebar{
   display: none;
 }
@@ -90,6 +86,7 @@ img {
 #welcome img{
   width: 100%;
   padding-bottom: 30px;
+  transform: scaleX(-1);
 }
 
 #welcome p{
@@ -245,9 +242,11 @@ input,textarea::placeholder {
 
 #history-origin-mision img{
   width: 100%;
+  max-width: 600px;
   padding-bottom: 20px; 
   padding-top: 20px;
 }
+
 
 #history-origin-mision p{
   margin-top: 30px;
@@ -320,6 +319,10 @@ input,textarea::placeholder {
   cursor: pointer;
 }
 
+.pagination li:nth-child(5), .pagination li:nth-child(6) {
+  display: none;
+}
+
 .pagination a {
   color:rgb(170, 206, 155);
   text-decoration: none;
@@ -348,21 +351,145 @@ footer p{
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/*
 
 
-*/
+@media screen and (min-width: 601px) {
 
-/*
-
-@media (max-width: 390px) {
-  .title {
-    font-size: 0.8rem;
-  }
-  header .icons img{
-    width: 0px;
-    height: auto;
-  }
 }
 
-*/
+ @media screen and (min-width: 1025px) {
+
+  body{
+      margin-left: 50px;
+      margin-right: 50px;
+  }
+
+  header #icon-menu {
+    display: none;
+  }
+
+  header .title {
+      margin-right: auto;
+      font-size: 0.8rem;
+  }
+
+  header .icons img {
+    width: 28px;
+    height: auto;
+  }
+
+  #welcome img{
+    display: none;
+  }
+
+  #welcome {
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 30px;
+    padding: 50px;
+    background-color: unset;
+    background-image: url("/../assets/imgs/mega-rocket.png");
+    background-size: cover;
+  }
+  
+  #welcome h3{
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    font-size: 3rem;
+  }
+  #welcome h2{
+    margin-top: 50px;
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    font-size: 4rem;
+  }
+  #welcome p{
+    margin: 50px;
+    margin-left: 0;
+    margin-right: 50%;
+    color: rgb(255, 255, 255);
+    opacity: 1;  
+    font-size: 1.5rem;
+  }
+  
+  #sidebar{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 30%;
+      padding: 30px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      background-color: rgba(170, 206, 155, 0.1);
+  }
+
+  .item{
+    width: 100%;
+    justify-content:left;
+  }
+
+  #sidebar .item{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .item input{
+    width: 300px;
+    padding: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: rgb(170, 206, 155, 0.1);
+    border: 1.5px solid rgb(55, 56, 103);
+    border-radius: 3px;
+    font-size: 1rem;
+  }
+
+  #menu li{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(55, 56, 103);
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .item h2{
+    margin-right: 80%;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 4px solid rgb(170, 206, 155);
+    font-size: 1.8rem;
+  }
+
+  .item h3{
+    white-space: nowrap;
+    margin-right: 60%;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    border-bottom: 4px solid rgb(170, 206, 155);
+    font-size: 1.8rem;
+  }
+
+  #menu a, ul{
+    text-decoration: none;
+    list-style: none;
+  }
+
+  a{
+    padding-left: 10px;
+    text-decoration: none;
+    list-style: none;
+    color: rgb(55, 56, 103);
+  }
+
+  #email, #phone, #address{
+    border-bottom: 1px solid rgb(55, 56, 103);
+  }
+
+  #address{
+    border: none
+  }
+
+    .pagination li:nth-child(5), .pagination li:nth-child(6) {
+    display: list-item;
+    }
+  }
