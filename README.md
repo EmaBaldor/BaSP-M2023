@@ -19,7 +19,7 @@ Progress by weeks:
 
 >## *Week 04*
 >We developed the landing page for mobile first using **flexbox** for Mobile, Tablet and Desktop version, with a responsive design.
-We also generate the github page to be publish the project: https://emabaldor.github.io/BaSP-M2023/Week-04
+We also generate the github page to be publish the project: [Link-page index.html](https://emabaldor.github.io/BaSP-M2023/Week-04/index.html "Index")
 
 ## Authors
 Emanuel Baldor Bacarini
