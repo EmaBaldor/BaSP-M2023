@@ -126,6 +126,7 @@ body{
 
 .box img {
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .box .text{
@@ -136,6 +137,14 @@ body{
 
 .box .text h3{
   text-align: left;
+}
+
+#more-content .box .text ol{
+  text-align: center;
+}
+
+#more-content .box .text h3{
+  text-align: center;
 }
 
 .box .text ol{
@@ -237,6 +246,9 @@ input,textarea::placeholder {
   padding-top: 20px;
 }
 
+.box-content-2{
+  display: none;
+}
 
 #history-origin-mision p{
   margin-top: 30px;
@@ -368,6 +380,14 @@ input,textarea::placeholder {
     display: inline-block;
   }
 
+  .box-content-2{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .box-content .image{
+    display: none;
+  }
 
 }
 
@@ -376,20 +396,6 @@ input,textarea::placeholder {
   body{
       margin-left: 50px;
       margin-right: 50px;
-  }
-
-  header #icon-menu {
-    display: none;
-  }
-
-  header .title {
-      margin-right: auto;
-      font-size: 0.8rem;
-  }
-
-  header .icons img {
-    width: 28px;
-    height: auto;
   }
 
   #welcome img{
@@ -538,8 +544,13 @@ input,textarea::placeholder {
   }
 
   .container .box .image{
+    width: 300px;
     padding-right: 0px;
     text-align: center;
+  }
+
+  .container .box img{
+    width: 200px;
   }
 
   #features{
@@ -574,6 +585,7 @@ input,textarea::placeholder {
   #history-origin-mision {
     padding-top: 5%;
     padding-bottom: 5%;
+    font-size: 1rem;
   }
 
   #origin-mision{
@@ -587,8 +599,21 @@ input,textarea::placeholder {
     font-size: 1rem;
   }
 
+  #history p{
+    font-size: 1rem;
+  }
+
   #history-origin-mision h2{
     font-size: 1.5rem;
+  }
+
+  .box-content-2{
+    display: none;
+  }
+
+  .box-content .image{
+    display: block;
+    padding-left: 2%;
   }
 
  .box-content{
@@ -599,6 +624,7 @@ input,textarea::placeholder {
 
   .box-content .text{
     width: 90%;
+    padding: 2%;
   }
 
   .pagination a{

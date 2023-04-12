@@ -33,3 +33,21 @@ header{
     width: 23px;
     margin: 5px;
   }
+
+  @media only screen and (min-width: 1025px) {
+
+    header #icon-menu {
+        display: none;
+      }
+    
+      header .title {
+          margin-right: auto;
+          font-size: 0.8rem;
+      }
+    
+      header .icons img {
+        width: 28px;
+        height: auto;
+      }
+      
+  }
