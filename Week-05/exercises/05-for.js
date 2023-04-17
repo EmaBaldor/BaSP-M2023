@@ -1,11 +1,15 @@
 // -------------------------------- 5 - For ---------------------------------
 
+console.log('Exercises 5-for.js');
+
 /*  
 ----------------------------- Exercise 5-a -----------------------------
 Crear un array que contenga 5 palabras y recorrer dicho array utilizando 
 un bucle for de JavaScript para mostrar una alerta utilizando cada una de 
 las palabras.
 */
+
+console.log('Exercise 5-a:');
 
 var words = ['uno', 'dos', 'tres', 'cuatro', 'cinco'];
 
@@ -20,6 +24,8 @@ for(var i = 0 ; i < words.length; i++){
 Al array anterior convertir la primera letra de cada palabra en mayúscula 
 y mostrar una alerta por cada palabra modificada.
 */
+
+console.log('Exercise 5-b:');
 
 for(var i = 0 ; i < words.length; i++){
     var firstLet = words[i].substring(0,1)
@@ -37,13 +43,15 @@ palabra dentro de la variable sentence. Al final mostrar una única alerta
 con la cadena completa.
 */
 
+console.log('Exercise 5-c:');
+
 var sentence = [];
 
 for(var i = 0 ; i < words.length; i++){
     sentence[i] = words[i];
 }
 
-alert('Exercise 5-c: ' + sentence);
+alert(sentence);
 
 
 
@@ -56,10 +64,12 @@ hasta al número 9. Mostrar por la consola del navegador el array final
 (utilizar console.log).
 */
 
+console.log('Exercise 5-d:');
+
 var arrayRepet = [];
 
 for(var i = 0; i < 10; i++){
     arrayRepet[i]=i;
 }
 
-console.log('Exercise 5-d: ' + arrayRepet);
+console.log(arrayRepet);

@@ -1,11 +1,15 @@
 // -------------------------------- 4 - If-Else ---------------------------------
 
+console.log('Exercises 4-if-else.js');
+
 /*  
 ----------------------------- Exercise 4-a -----------------------------
 Crear un número aleatorio entre 0 y 1 utilizando la función Math.random(), 
 si el valor es mayor o igual que 0,5 mostrar una alerta con el mensaje 
 “Greater than or equal to 0,5” y sino un alerta con el mensaje “Lower than 0,5”.
 */
+
+console.log('Exercise 4-a:');
 
 var numRandom = Math.random();
 
@@ -15,7 +19,7 @@ if (numRandom >= 0.5){
     alert('Exercise 4-a: Lower than 0,5');
 }
 
-console.log('Exercise 4-a: ' + numRandom);
+console.log(numRandom);
 
 
 /*  
@@ -31,6 +35,7 @@ vii. “Anciano” si es mayor a 75 años
 
 */
 
+console.log('Exercise 4-b:');
 
 var age = 33;
 
@@ -50,4 +55,4 @@ if (age < 2){
     alert('Exercise 4-b: Anciano');
 }
 
-console.log('Exercise 4-a: ' + age);
+console.log(age);

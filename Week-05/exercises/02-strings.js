@@ -1,11 +1,14 @@
 // -------------------------------- 2 - Strings ---------------------------------
 
+console.log('Exercises 2-strings.js');
+
 /*  
 ----------------------------- Exercise 2-a -----------------------------
 Crear una variable de tipo string con al menos 10 caracteres y convertir 
 todo el texto en mayúscula (utilizar toUpperCase).
 */
 
+console.log('Exercise 2-a:');
 
 var str = 'convertiramayuscula';
 
@@ -21,6 +24,8 @@ nuevo string con los primeros 5 caracteres guardando el resultado en una
 nueva variable (utilizar substring).
 */
 
+console.log('Exercise 2-b:');
+
 var str = 'cincocaracteres';
 
 var strShort = str.substring(0,5);
@@ -35,6 +40,8 @@ nuevo string con los últimos 3 caracteres guardando el resultado en una
 nueva variable (utilizar substring).
 */
 
+console.log('Exercise 2-c:');
+
 var str = 'trescaracteres';
 
 var strShort = str.substring(str.length - 3);
@@ -48,6 +55,8 @@ nuevo string con la primera letra en mayúscula y las demás en minúscula.
 Guardar el resultado en una nueva variable (utilizar substring, toUpperCase, 
 toLowerCase y el operador +).
 */
+
+console.log('Exercise 2-d:');
 
 var str = 'primerLetraMayuscula';
 
@@ -66,6 +75,8 @@ en blanco. Encontrar la posición del primer espacio en blanco y guardarla en
 una variable (utilizar indexOf).
 */
 
+console.log('Exercise 2-e:');
+
 var str = 'buscarEspacio enBlanco';
 
 var position = str.indexOf(' ');
@@ -81,7 +92,9 @@ mayúscula y las demás letras en minúscula (utilizar indexOf, substring, toUpp
 toLowerCase y el operador +).
 */
 
-var str = 'palabras mayuscula';
+console.log('Exercise 2-f:');
+
+var str = 'palaaaaaaabras maaaaaaayuscula';
 
 // Encontramos la posicion donde termina la primer palabra 
 var position = str.indexOf(' ');
