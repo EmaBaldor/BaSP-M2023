@@ -1,0 +1,53 @@
+header{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  border-bottom: 7px solid rgb(170, 206, 155);
+}
+
+#icon-menu {
+  margin-right: auto;
+}
+
+#icon-menu img{
+  width: 40px;
+  height: auto;
+  margin: 10px;
+}
+
+header .title {
+  flex:1;
+  justify-content: center;
+  text-align:justify;
+  color: rgba(55, 56, 103, 0.4);
+  font-size: 0.7rem;
+  padding: 10px;
+}
+
+header .icons {
+  padding-right: 10px;
+}
+
+header .icons img{
+  width: 23px;
+  margin: 5px;
+}
+
+@media only screen and (min-width: 1025px) {
+
+header #icon-menu {
+    display: none;
+}
+
+header .title {
+    margin-right: auto;
+    font-size: 0.8rem;
+}
+
+header .icons img {
+  width: 28px;
+  height: auto;
+}
+    
+}
