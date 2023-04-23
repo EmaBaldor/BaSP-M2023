@@ -85,7 +85,6 @@ main{
 .box input{
     width: 200px;
     padding: 5%;
-    border: 1px solid #373867;
     border-radius:5px;
 }
 
@@ -112,4 +111,18 @@ input::placeholder {
 .box a{
     font-size: 0.8rem;
     font-weight: bold;
+}
+
+.input-error {
+    border: 2px solid red;
+    color: red;
+    font-size: 1rem;
+}
+
+.error {
+    width: 200px;
+    padding-top: 2%;
+    color: red;
+    text-align: left;
+    font-size: 0.8rem;
 }
