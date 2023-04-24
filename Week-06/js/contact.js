@@ -136,7 +136,7 @@ window.onload = function() {
                 alert('Data sent: ' + '\n' +
                       'Name: ' + nameInput.value + '\n' + 
                       'Last name: ' + lnameInput.value + '\n' + 
-                      'Email: ' + emailInput.value + 
+                      'Email: ' + emailInput.value + '\n' + 
                       'Contact reason: ' + reasonList.value + '\n' + 
                       'Message: ' + messageInput.value);
 
