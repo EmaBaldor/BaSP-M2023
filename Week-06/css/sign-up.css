@@ -87,15 +87,20 @@ input::placeholder {
     padding-right: 3%;
 }
 
-.indicate h4{
-    margin-top: 20%;
-    text-align: right;
+.indicate{
+    width: 100%;
+    padding: 2%;
+}
+
+.indicate span{
     font-style: italic;
+    font-size: 0.9rem;
+    font-weight: bold;
 }
 
 .button{
     padding-top: 1%;
-    padding-right: 8%;
+    padding-right: 4%;
     text-align: right;
 }
 
