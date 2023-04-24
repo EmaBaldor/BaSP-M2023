@@ -54,7 +54,7 @@ Progress by weeks:
 >
 >
 This week we apply the knowledge acquired with **javascript** and **DOM** in the functional version of the index (contact form), login and sign-up pages for the validation of the fields, with their respective PDF file of requirements. 
->#### [requirements.pdf](https://emabaldor.github.io/BaSP-M2023/Week-06/requirements "Requirements")
+>#### [requirements.pdf](https://github.com/EmaBaldor/BaSP-M2023/blob/master/Week-06/requirements.pdf "Requirements")
 We also create a folder structure to hold the javascript files.
 >Links of the worked pages:
 >
