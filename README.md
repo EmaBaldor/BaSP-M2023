@@ -50,5 +50,18 @@ Progress by weeks:
 >#### [Link Week-05 index.html](https://emabaldor.github.io/BaSP-M2023/Week-05/index.html "Index")
 ---
 
+>## *Week 06*
+>
+>
+This week we apply the knowledge acquired with **javascript** and **DOM** in the functional version of the index (contact form), login and sign-up pages for the validation of the fields, with their respective PDF file of requirements. 
+>#### [requirements.pdf](https://emabaldor.github.io/BaSP-M2023/Week-06/requirements "Requirements")
+We also create a folder structure to hold the javascript files.
+>Links of the worked pages:
+>
+>#### [Link Week-06 index.html](https://emabaldor.github.io/BaSP-M2023/Week-06/views/index.html "Index")
+>#### [Link Week-06 login.html](https://emabaldor.github.io/BaSP-M2023/Week-06/views/login.html "Login")
+>#### [Link Week-06 sign-up.html](https://emabaldor.github.io/BaSP-M2023/Week-06/views/sign-up.html "Sign-up")
+---
+
 ## Authors
 Emanuel Baldor Bacarini
