@@ -8,8 +8,7 @@ window.onload = function() {
     // Valid email
     var emailInput = document.getElementById("emailInput");
     var emailError = document.createElement("div");
-    var msjError = "* Invalid email"
-
+    var msjError = '* Invalid emai'
     validateInput(emailInput, emailError, emailInput.value, validateEmail, msjError);
 
     function validateEmail(email) {
@@ -20,8 +19,7 @@ window.onload = function() {
     // Valid password
     var passInput = document.getElementById("passInput");
     var passError = document.createElement("div");
-    var msjError = "* Invalid password. Must contain letters and numbers.";
-
+    var msjError = '* Invalid password. Must contain letters and numbers.';
     validateInput(passInput, passError, passInput.value, validatePassword, msjError);
 
     function validatePassword(password) {
@@ -60,13 +58,13 @@ window.onload = function() {
               errorElement.textContent = msj;
           } else {
               inputElement.classList.remove("input-error");
-              errorElement.textContent = "";
+              errorElement.textContent = '';
           }
         }
 
         inputElement.addEventListener("focus", function() {
             inputElement.classList.remove("input-error");
-            errorElement.textContent = "";
+            errorElement.textContent = '';
         });
 
     }
@@ -76,19 +74,19 @@ window.onload = function() {
         // Valid empty fields
         if ((emailInput.value.trim().length !== 0) && (passInput.value.trim().length !== 0)) {
             // Valid error fields
-            if ((emailError.textContent  == "") && (passError.textContent  == "")) {
-                alert("Email: " + emailInput.value + "\n" + "Password: " + passInput.value)
+            if ((emailError.textContent  == '') && (passError.textContent  == '')) {
+                alert('Email: ' + emailInput.value + '\n' + 'Password: ' + passInput.value)
             } else {
-                if ((emailError.textContent !== "") && (passError.textContent !== "")){
-                    alert("* Email and Password invalid")
-                }else if (emailError.textContent !== ""){
-                    alert("* Email invalid")
-                }else if (passError.textContent !== ""){
-                    alert("* Password invalid")
+                if ((emailError.textContent !== '') && (passError.textContent !== '')){
+                    alert('* Email and Password invalid')
+                }else if (emailError.textContent !== ''){
+                    alert('* Email invalid')
+                }else if (passError.textContent !== ''){
+                    alert('* Password invalid')
                 }
             }
         }else{
-            alert("* Complete the fields to enter")
+            alert('* Complete the fields to enter')
         }
     });
 
