@@ -9,67 +9,67 @@ window.onload = function() {
     var nameInput = document.getElementById("nameInput");
     var nameError = document.createElement("span");
     var nameMsj = '* Invalid name. Letters only and more than 3 characters.'
-    validateInput(nameInput, nameError, nameInput.value, validateName, nameMsj);
+    validateInput(nameInput, nameError, validateName, nameMsj);
 
     // lname
     var lnameInput = document.getElementById("lnameInput");
     var lnameError = document.createElement("span");
     var lnameMsj = '* Invalid last name. Letters only and more than 3 characters.'
-    validateInput(lnameInput, lnameError, lnameInput.value, validateName, lnameMsj);
+    validateInput(lnameInput, lnameError, validateName, lnameMsj);
 
     // DNI
     var dniInput = document.getElementById("dniInput");
     var dniError = document.createElement("span");
     var dniMsj = '* Invalid DNI. Numbers only and more than 7 characters.'
-    validateInput(dniInput, dniError, dniInput.value, validateDni, dniMsj);
+    validateInput(dniInput, dniError, validateDni, dniMsj);
 
     // birth date
     var dateInput = document.getElementById("dateInput");
     var dateError = document.createElement("span");
     var dateMsj = '* Invalid date. Must be over 8 years old.'
-    validateInput(dateInput, dateError, dateInput.value, validateDate, dateMsj);
+    validateInput(dateInput, dateError, validateDate, dateMsj);
 
     // telephone number
     var telInput = document.getElementById("telInput");
     var telError = document.createElement("span");
     var telMsj = '* Invalid telephone number. only 10 numbers.'
-    validateInput(telInput, telError, telInput.value, validateTel, telMsj);
+    validateInput(telInput, telError, validateTel, telMsj);
 
     // address
     var addrInput = document.getElementById("addrInput");
     var addrError = document.createElement("span");
     var addrMsj = '* Invalid address. At least 5 characters with letters, numbers and a space in between.'
-    validateInput(addrInput, addrError, addrInput.value, validateAddress, addrMsj);
+    validateInput(addrInput, addrError, validateAddress, addrMsj);
 
     // location
     var locInput = document.getElementById("locInput");
     var locError = document.createElement("span");
     var locMsj = '* Invalid location. More than 3 characters.'
-    validateInput(locInput, locError, locInput.value, validateLocation, locMsj);
+    validateInput(locInput, locError, validateLocation, locMsj);
 
     // postal code
     var posInput = document.getElementById("posInput");
     var posError = document.createElement("span");
     var posMsj = '* Invalid postal code. Numbers only and must have between 4 and 5 numbers.'
-    validateInput(posInput, posError, posInput.value, validatePostal, posMsj);
+    validateInput(posInput, posError, validatePostal, posMsj);
 
     // email
     var emailInput = document.getElementById("emailInput");
     var emailError = document.createElement("span");
     var emailMsj = '* Invalid email'
-    validateInput(emailInput, emailError, emailInput.value, validateEmail, emailMsj);
+    validateInput(emailInput, emailError, validateEmail, emailMsj);
 
     // password
     var passInput = document.getElementById("passInput");
     var passError = document.createElement("span");
     var passMsj = '* Invalid password. Must contain numbers and letters and more than 8 characters.'
-    validateInput(passInput, passError, passInput.value, validatePassword, passMsj);
+    validateInput(passInput, passError, validatePassword, passMsj);
 
     // password repeat
     var rpassInput = document.getElementById("rpassInput");
     var rpassError = document.createElement("span");
     var rpassMsj = '* Repeated password invalid. It does not match the password entered.'
-    validateInput(rpassInput, rpassError, rpassInput.value, validatePasswordRep, rpassMsj);
+    validateInput(rpassInput, rpassError, validatePasswordRep, rpassMsj);
 
     // -- Functions -- //
 
@@ -221,9 +221,9 @@ window.onload = function() {
     }
 
     //Generic function to show errors
-    function validateInput(inputElement, errorElement, initialValue, validationFunction, msj) {
-
-        var valueInicial = initialValue;
+    function validateInput(inputElement, errorElement, validationFunction, msj) { 
+        var valueInicial = inputElement.value;
+        
         inputElement.onblur = function() {
             var value = inputElement.value;
             var isValid = validationFunction(value);
@@ -271,7 +271,8 @@ window.onload = function() {
                 (passError.textContent  == '') && 
                 (rpassError.textContent  == '') ){
 
-                alert('Name: ' + nameInput.value + '\n' + 
+                alert('Data sent: ' + '\n' + 
+                      'Name: ' + nameInput.value + '\n' + 
                       'Last name: ' + lnameInput.value + '\n' + 
                       'Dni: ' + dniInput.value + '\n' + 
                       'Birth date: ' + convertDate(dateInput.value) + '\n' + 
@@ -318,7 +319,6 @@ window.onload = function() {
             alert('* Complete the fields to enter')
         }
     });
-    
 }
 
 

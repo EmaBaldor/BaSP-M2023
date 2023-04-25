@@ -9,7 +9,7 @@ window.onload = function() {
     var emailInput = document.getElementById("emailInput");
     var emailError = document.createElement("div");
     var msjError = '* Invalid emai'
-    validateInput(emailInput, emailError, emailInput.value, validateEmail, msjError);
+    validateInput(emailInput, emailError, validateEmail, msjError);
 
     function validateEmail(email) {
         var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
@@ -20,7 +20,7 @@ window.onload = function() {
     var passInput = document.getElementById("passInput");
     var passError = document.createElement("div");
     var msjError = '* Invalid password. Must contain letters and numbers.';
-    validateInput(passInput, passError, passInput.value, validatePassword, msjError);
+    validateInput(passInput, passError, validatePassword, msjError);
 
     function validatePassword(password) {
         var letter = false;
@@ -42,9 +42,9 @@ window.onload = function() {
         return isValid
     }
 
-    function validateInput(inputElement, errorElement, initialValue, validationFunction, msj) {
+    function validateInput(inputElement, errorElement, validationFunction, msj) {
         
-        var valueInicial = initialValue;
+        var valueInicial = inputElement.value;
       
         inputElement.onblur = function() {
 
@@ -75,7 +75,7 @@ window.onload = function() {
         if ((emailInput.value.trim().length !== 0) && (passInput.value.trim().length !== 0)) {
             // Valid error fields
             if ((emailError.textContent  == '') && (passError.textContent  == '')) {
-                alert('Email: ' + emailInput.value + '\n' + 'Password: ' + passInput.value)
+                alert('Data sent: ' + '\n' + 'Email: ' + emailInput.value + '\n' + 'Password: ' + passInput.value)
             } else {
                 if ((emailError.textContent !== '') && (passError.textContent !== '')){
                     alert('* Email and Password invalid')

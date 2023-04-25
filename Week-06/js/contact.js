@@ -4,19 +4,19 @@ window.onload = function() {
     var nameInput = document.getElementById("nameInput");
     var nameError = document.createElement("span");
     var nameMsj = '* Invalid name. Letters only and more than 3 characters.';
-    validateInput(nameInput, nameError, nameInput.value, validateName, nameMsj);
+    validateInput(nameInput, nameError, validateName, nameMsj);
 
     // lname
     var lnameInput = document.getElementById("lnameInput");
     var lnameError = document.createElement("span");
     var lnameMsj = '* Invalid last name. Letters only and more than 3 characters.';
-    validateInput(lnameInput, lnameError, lnameInput.value, validateName, lnameMsj);
+    validateInput(lnameInput, lnameError, validateName, lnameMsj);
 
     // email
     var emailInput = document.getElementById("emailInput");
     var emailError = document.createElement("span");
     var emailMsj = '* Invalid email';
-    validateInput(emailInput, emailError, emailInput.value, validateEmail, emailMsj);
+    validateInput(emailInput, emailError, validateEmail, emailMsj);
 
     // contact reason
     var reasonList = document.getElementById("reasonList");
@@ -28,7 +28,7 @@ window.onload = function() {
     var messageInput = document.getElementById("messageInput");
     var messageError = document.createElement("div");
     var messageMsj = '* Invalid message. Must contain numbers and letters and more than 3 characters.';
-    validateInput(messageInput, messageError, messageInput.value, validateMessage, messageMsj);
+    validateInput(messageInput, messageError, validateMessage, messageMsj);
 
     // -- Functions -- //
 
@@ -93,11 +93,10 @@ window.onload = function() {
         return emailExpression.test(inputValue);
     }
 
-
     //Generic function to show errors
-    function validateInput(inputElement, errorElement, initialValue, validationFunction, msj) {
+    function validateInput(inputElement, errorElement, validationFunction, msj) {
 
-        var valueInicial = initialValue;
+        var valueInicial = inputElement.value;
         inputElement.onblur = function() {
             var value = inputElement.value;
             var isValid = validationFunction(value);
