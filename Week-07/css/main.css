@@ -1,0 +1,666 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+  
+html{
+  color:rgb(55, 56, 103);
+  background-color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  margin-left: 3%;
+  margin-right: 3%;
+  min-width: 450px;
+}
+
+.home{
+  display: flex;
+  background: rgba(170, 206, 155, 0.1);
+}
+
+.sidebar{
+  display: none;
+}
+
+#search{
+  width: 100%;
+  padding-left: 30px;
+  background-image: url("/assets/imgs/search.png"); 
+  background-repeat: no-repeat; 
+  background-position: 5px center; 
+}
+
+.welcome{
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  background-color: rgb(170, 206, 155, 0.1);
+}
+
+.welcome button{
+  display: none;
+}
+
+.welcome h2{
+  padding-top: 4%;
+  padding-bottom: 4%;
+  padding-left: 1%;
+  padding-right: 1%;
+  font-size: 2.3rem;
+}
+
+.welcome h3{
+  padding-bottom: 30px;
+  padding-left: 1%;
+  padding-right: 1%;
+  font-size: 1.7rem;
+  font:normal;
+  opacity: 0.4;
+}
+
+.welcome img{
+  width: 100%;
+  padding-bottom: 30px;
+  transform: scaleX(-1);
+}
+
+.welcome p{
+  padding-left: 1%;
+  padding-right: 1%;
+  line-height: 1.6em;
+  opacity: 0.4;
+  font-size: 1.3rem;
+}
+
+#menu-mobile {
+  background-color: rgb(170, 206, 155, 0.2);
+}
+
+#menu-mobile ul {
+  display: flex; 
+  padding: 3%; 
+  padding-left: 0%;
+  list-style: none;
+}
+
+#menu-mobile li {
+  padding-right: 2%;
+  margin-left: 2%;
+  border-right: 1px solid rgb(55, 56, 103);
+}
+
+#menu-mobile a {
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color:rgb(55, 56, 103);
+}
+
+#menu-mobile li:last-child {
+  border-right: none; 
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  width: auto;
+  padding-bottom: 40px;
+}
+
+.box img{
+  max-width: 100px;
+  text-align: left;
+}
+
+.box .image{
+  padding: 5%;
+}
+
+.box .text{
+  width: auto;
+  padding-top: 4%;
+  justify-content: center;
+}
+
+.box .text h3{
+  width: auto;
+  text-align: left;
+  margin-bottom: 2%;
+  font-size: 2.5rem;
+}
+
+.box .text p{
+  padding-right: 10%;
+  color: rgb(55, 56, 103);
+  font-size: 1rem;
+}
+
+.box .text ol{
+  width: auto;
+  font-size: 14px;
+  line-height : 20px;
+  text-align: left;
+}
+
+.text-ol{
+  text-align: center;
+}
+
+.features{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-top: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  border-top: 2px solid rgb(227,221,221);
+}
+
+.features .title{
+  width: 200px;
+  margin-bottom: 5%;
+  padding-bottom: 1%;
+  border-bottom: 4px solid rgb(170, 206, 155);
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  border-top: 2px solid rgb(227,221,221);
+  border-bottom: 2px solid rgb(227,221,221);
+}
+
+#contact h2 {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  font-size: 2rem;
+}
+
+label{
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.contact-form input, textarea{
+  width: 100%;
+  padding: 10px;
+  color: rgb(55, 56, 103);
+  background-color: rgb(255,255,255);
+  border: 1.5px solid rgb(55, 56, 103);
+  border-radius: 6px;
+}
+
+.contact-form textarea {
+  border: 1.5px solid rgb(227,221,221);
+}
+
+input,textarea::placeholder {
+  font-size: 1rem;
+  opacity: 0.6;
+}
+
+#message textarea{
+  padding-bottom: 50px;
+  border: 2px solid rgb(227,221,221);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form button {
+  width: 120px;
+  padding: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 30PX;
+  margin-right: 50px;
+  border-radius: 5px;
+  background-color: rgb(255,255,255);
+  border: 1px solid rgb(55, 56, 103);
+  color: rgb(55, 56, 103);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.contact-form #button-send {
+  background-color: rgb(170, 206, 155);
+  border: none;
+  font-weight: bolder;
+}
+
+.input-error {
+  border: 2px solid red;
+  color: red;
+  font-size: 1rem;
+}
+
+.error {
+  width: 100%;
+  padding-top: 2%;
+  color: red;
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+.history-origin-mision {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  color: rgba(55, 56, 103, 0.4);
+  border-bottom: 2px solid rgb(227,221,221);
+  font-size: 1rem;
+  line-height: 18px;
+  letter-spacing: 1px;
+}
+
+.history-origin-mision img{
+  width: 100%;
+  max-width: 600px;
+  padding-bottom: 20px; 
+  padding-top: 20px;
+}
+
+.box-content-2{
+  display: none;
+}
+
+.history-origin-mision p{
+  margin-top: 30px;
+}
+
+#history p{
+  padding-left: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 20px;
+  border-left: 7px solid rgb(55, 56, 103);
+}
+
+.history-origin-mision p{
+  margin-top: 30px;
+}
+
+.history-origin-mision h2,h3{
+  color: rgb(55, 56, 103);
+}
+
+.more-content{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  margin-bottom: 5%;
+}
+
+.more-content .box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.more-content ol {
+  align-items: center;
+  list-style-position: inside;
+  font-size: 1rem;
+}
+
+.more-content h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.more-content .box img {
+  width: 100%;
+  
+}
+
+.pagination {
+  text-align: center; 
+  padding-bottom: 50px;
+}
+
+.pagination ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.pagination li {
+  margin: 10px;
+  padding: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border: 2px solid rgb(170, 206, 155);
+  border-radius: 5px;
+  list-style:none;
+  cursor: pointer;
+}
+
+.pagination li:nth-child(5), .pagination li:nth-child(6) {
+  display: none;
+}
+
+.pagination a {
+  color:rgb(170, 206, 155);
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 601px) {
+
+.welcome{
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome h2{
+  order:1;
+}
+
+.welcome h3{
+  order:2;
+}
+
+.welcome p{
+  order:3;
+  padding-bottom: 2%;
+}
+
+.welcome img{
+  order:4;
+}
+
+.welcome button{
+  order:5;
+}
+
+.container .box{
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-form .button{
+  display: inline-block;
+}
+
+.box-content-2{
+  display: flex;
+  flex-direction: row;
+}
+
+.box-content .image{
+  display: none;
+}
+
+}
+
+@media only screen and (min-width: 1025px) {
+
+body{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#menu-mobile {
+  display: none;
+}
+
+.welcome img{
+  display: none;
+}
+
+.welcome {
+  align-items: flex-start;
+  width: 100%;
+  padding: 4%;
+  padding-top: 2%;
+  background-color: unset;
+  background-color: rgba(32, 32, 32, 0.45);
+  background-image: url("../../assets/imgs/mega-rocket.png");
+  background-blend-mode: overlay;
+  background-size: cover;
+}
+
+.welcome h2{
+  margin-top: 2%;
+  color: rgb(255, 255, 255);
+  opacity: 90%;
+  font-size: 3.5rem;
+}
+
+.welcome h3{
+  padding-bottom: 0%;
+  color: rgb(255, 255, 255);
+  opacity: 90%;
+  font-size: 2.3rem;
+}
+
+.welcome p{
+  margin: 50px;
+  margin-left: 0;
+  margin-right: 30%;
+  color: rgb(255, 255, 255);
+  opacity: 90%;
+  font-size: 1.5rem;
+}
+
+.welcome button {
+  display: block;
+  margin-left: 1%;
+  padding: 1% 3%;
+  background-color: rgb(170, 206, 155);
+  border: none;
+  border-radius: 5px;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.welcome button a {
+  text-decoration: none;
+  color: rgb(55, 56, 103);
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+    padding: 3%;
+    background-color: rgba(170, 206, 155, 0.1)
+}
+
+.sidebar .item{
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content:left;
+  font-size: 0.9rem;
+
+}
+
+.item input{
+  width: 100%;
+  padding: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: rgb(170, 206, 155, 0.1);
+  border: 1.5px solid rgb(55, 56, 103);
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+#menu li{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(55, 56, 103);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.item h2{
+  width: 80px;
+  margin-right: 80%;
+  margin-top: 5%;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 4px solid rgb(170, 206, 155);
+  font-size: 1.8rem;
+}
+
+.item h3{
+  width: 150px;
+  white-space: nowrap;
+  margin-top: 5%;
+  margin-right: 60%;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+  border-bottom: 4px solid rgb(170, 206, 155);
+  font-size: 1.8rem;
+}
+
+#menu a, ul{
+  color: rgb(55, 56, 103);
+  text-decoration: none;
+  list-style: none;
+}
+
+#menu li:last-child {
+  border-bottom: none; 
+}
+
+.container-contact{
+  display: flex;
+  flex-direction: column;
+}
+
+.container-contact .item{
+  display: flex;
+}
+
+.container-contact img{
+  width: 20px;
+  height: 18px;
+  margin: 5%;
+  margin-left: 0;
+}
+
+.container-contact a{
+  align-self: center;
+  text-decoration: none;
+  list-style: none;
+  color: rgb(55, 56, 103);
+}
+
+#address{
+  border: none
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container .box{
+  flex-basis: 50%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.container .box .image{
+  text-align: center;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contact-data{
+  display: flex;
+  width: 100%;
+}
+
+.contact-data .contact{
+  width: 100%;
+  padding-right: 1%;
+}
+
+.contact-form #contact-list{
+  width: 50%;
+}
+
+.contact-form .button{
+  display: inline-block;
+}
+
+.history-origin-mision {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 1rem;
+}
+
+#origin-mision{
+  display: flex;
+}
+
+#origin-mision p{
+  font-size: 1rem;
+}
+
+#history p{
+  font-size: 1rem;
+}
+
+.history-origin-mision h2{
+  font-size: 1.5rem;
+}
+
+.box-content-2{
+  display: none;
+}
+
+.box-content .image{
+  display: block;
+  padding-left: 2%;
+}
+
+.box-content{
+  width: 100%;
+  padding-right: 1%;
+  padding-left: 0;
+}
+
+.box-content .text{
+  width: 90%;
+  padding: 2%;
+}
+
+.pagination a{
+  padding: 1%;
+}
+
+.pagination li:nth-child(5), .pagination li:nth-child(6) {
+  display: list-item;
+}
+
+}
