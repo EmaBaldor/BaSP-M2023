@@ -21,7 +21,7 @@ window.onload = function() {
     // birth date
     var dateInput = document.getElementById("dateInput");
     var dateError = document.createElement("span");
-    var dateMsj = '* Invalid date. Must be over 8 years old.'
+    var dateMsj = '* Invalid date. Date of birth must be before today.'
     validateInput(dateInput, dateError, validateDate, dateMsj);
     // telephone number
     var telInput = document.getElementById("telInput");
@@ -51,17 +51,15 @@ window.onload = function() {
     // password
     var passInput = document.getElementById("passInput");
     var passError = document.createElement("span");
-    var passMsj = '* Invalid password. Must contain numbers and letters and more than 8 characters.'
+    var passMsj = '* Invalid password. Must contain numbers and letters and more than 7 characters.'
     validateInput(passInput, passError, validatePassword, passMsj);
     // password repeat
     var rpassInput = document.getElementById("rpassInput");
     var rpassError = document.createElement("span");
     var rpassMsj = '* Repeated password invalid. It does not match the password entered.'
     validateInput(rpassInput, rpassError, validatePasswordRep, rpassMsj);
-
+    //
     var inputs = document.getElementsByTagName("input");
-    var spans = document.getElementsByTagName("span");
-
     // -- Functions -- //
     // Contains letters
     function contLetters(inputValue){
@@ -96,6 +94,12 @@ window.onload = function() {
         var newDate = date_parts[1] + '/' + date_parts[2] + '/' + date_parts[0];
         return newDate
     }
+    //Convert dateForm
+    function convertDateForm(date) {
+        var date_parts = date.split('/');
+        var newDate = date_parts[2] + '-' + date_parts[0] + '-' + date_parts[1];
+        return newDate
+    }
     // Contains character special
     function contSpecialChar(inputValue) {
         var speChar = false;
@@ -108,13 +112,13 @@ window.onload = function() {
     function validateName(inputValue) {
         var isValid = false;
         if (!contSpecialChar(inputValue) && contLetters(inputValue) && !contNumbers(inputValue) && 
-            inputValue.length >= 3) isValid = true;
+            inputValue.length > 3) isValid = true;
         return isValid;
     }
     //Validate only numbers and more than 7 characters
     function validateDni(inputValue) {
         var isValid = false;
-        if (!isNaN(inputValue) && inputValue.length >= 7) isValid = true;
+        if (!isNaN(inputValue) && inputValue.length > 7) isValid = true;
         return isValid;
     }
     //Validate only 10 numbers
@@ -123,12 +127,13 @@ window.onload = function() {
         if (!isNaN(inputValue) && inputValue.length == 10) isValid = true;
         return isValid;
     }
-    //Validate year < 8
+    //Validate year < today
     function validateDate(inputValue) {
         var isValid = false;
         var dateNow = new Date();
+        var inputDate = new Date(inputValue);
         var year = dateNow.getFullYear();
-        if ((inputValue.substring(0,4) < (year-8)) && (inputValue.length == 10)) isValid = true;
+        if ((inputDate < dateNow) && (inputValue.length == 10)) isValid = true;
         return isValid;
     }
     //Validates at least 5 characters with letters, numbers and a space in between.
@@ -141,7 +146,7 @@ window.onload = function() {
     //Validate more than 3 characters.
     function validateLocation(inputValue) {
         var isValid = false;
-        if (!contSpecialChar(inputValue) && contLetters(inputValue) && inputValue.length >= 3) isValid = true;
+        if (!contSpecialChar(inputValue) && contLetters(inputValue) && inputValue.length > 3) isValid = true;
         return isValid;
     }
     //Validate numbers only and must have between 4 and 5 numbers.
@@ -156,11 +161,11 @@ window.onload = function() {
         var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
         return emailExpression.test(inputValue);
     }
-    //Validate numbers and letters and more than 8 characters.
+    //Validate numbers and letters and more than 7 characters.
     function validatePassword(inputValue) {
         var isValid = false;
         if (!contSpecialChar(inputValue) && contLetters(inputValue) && contNumbers(inputValue) && 
-            inputValue.length >= 8) isValid = true;
+            inputValue.length >= 7) isValid = true;
         return isValid;
     }
     //Validate password vs password repeat.
@@ -234,11 +239,12 @@ window.onload = function() {
             }
         })
         .then(function (data) {
-            //console.log(data.data.id);
             if (data.success){
                 var message = "Employee created:\n";
                 for (var key in data.data) {
                     message += key + ": " + data.data[key] + "\n";
+                    //Save data in local storage
+                    localStorage.setItem(key, data.data[key]);
                 }
                 alert(message);
             } else {
@@ -255,6 +261,18 @@ window.onload = function() {
             alert('Errors: \n' + msg);
         })
     }
+    // Loaded data from localstorage
+    document.getElementById("nameInput").value = localStorage.getItem("name");
+    document.getElementById("lnameInput").value = localStorage.getItem("lastName");
+    document.getElementById("dniInput").value = localStorage.getItem("dni");
+    document.getElementById("dateInput").value = convertDateForm(localStorage.getItem("dob"));
+    document.getElementById("telInput").value = localStorage.getItem("phone");
+    document.getElementById("addrInput").value = localStorage.getItem("address");
+    document.getElementById("locInput").value = localStorage.getItem("city");
+    document.getElementById("posInput").value = localStorage.getItem("zip");
+    document.getElementById("emailInput").value = localStorage.getItem("email");
+    document.getElementById("passInput").value = localStorage.getItem("password");
+    document.getElementById("rpassInput").value = localStorage.getItem("password");
     // Register event
     document.getElementById("register").addEventListener("click", function() {
         // Valid empty fields
