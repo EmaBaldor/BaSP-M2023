@@ -54,13 +54,31 @@ Progress by weeks:
 >
 >
 This week we apply the knowledge acquired with **javascript** and **DOM** in the functional version of the index (contact form), login and sign-up pages for the validation of the fields, with their respective PDF file of requirements. 
+
 >#### [requirements.pdf](https://github.com/EmaBaldor/BaSP-M2023/blob/master/Week-06/requirements.pdf "Requirements")
+
 We also create a folder structure to hold the javascript files.
 >Links of the worked pages:
 >
 >#### [Link Week-06 index.html](https://emabaldor.github.io/BaSP-M2023/Week-06/views/index.html "Index")
 >#### [Link Week-06 login.html](https://emabaldor.github.io/BaSP-M2023/Week-06/views/login.html "Login")
 >#### [Link Week-06 sign-up.html](https://emabaldor.github.io/BaSP-M2023/Week-06/views/sign-up.html "Sign-up")
+---
+
+>## *Week 07*
+>
+>
+During week 07 we continue working on the javascript functionalities applying asynchronous HTTP requests with the **Fetch** function, use of promises and response handling with **.then** and **.catch**. 
+
+Adding to the project the validation carried out by the api and showing the responses obtained in modals.
+
+We also work with **local storage**, saving the data obtained in the responses.
+
+>Links of the worked pages:
+>
+>#### [Link Week-07 index.html](https://emabaldor.github.io/BaSP-M2023/Week-07/views/index.html "Index")
+>#### [Link Week-07 login.html](https://emabaldor.github.io/BaSP-M2023/Week-07/views/login.html "Login")
+>#### [Link Week-07 sign-up.html](https://emabaldor.github.io/BaSP-M2023/Week-07/views/sign-up.html "Sign-up")
 ---
 
 ## Authors
