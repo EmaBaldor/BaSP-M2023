@@ -16,7 +16,7 @@ window.onload = function() {
     // DNI
     var dniInput = document.getElementById("dniInput");
     var dniError = document.createElement("span");
-    var dniMsj = '* Invalid DNI. Numbers only and more than 7 characters.'
+    var dniMsj = '* Invalid DNI. Numbers only and must have between 7 and 8 numbers.'
     validateInput(dniInput, dniError, validateDni, dniMsj);
     // birth date
     var dateInput = document.getElementById("dateInput");
@@ -118,7 +118,7 @@ window.onload = function() {
     //Validate only numbers and more than 7 characters
     function validateDni(inputValue) {
         var isValid = false;
-        if (!isNaN(inputValue) && inputValue.length > 7) isValid = true;
+        if (!isNaN(inputValue) && inputValue.length >= 7 && inputValue.length <= 8) isValid = true;
         return isValid;
     }
     //Validate only 10 numbers
@@ -180,17 +180,23 @@ window.onload = function() {
         inputElement.onblur = function() {
             var value = inputElement.value;
             var isValid = validationFunction(value);
-            if ((value !== valueInicial) && (!isValid)){
-                inputElement.classList.add("input-error");
-                errorElement.textContent = msj;
+            if (!isValid){
+                if (value === valueInicial) {
+                    errorElement.textContent = 'Complete the field.';
+                }else{
+                    errorElement.textContent = msj;
+                }
                 inputElement.parentNode.insertBefore(errorElement, inputElement.nextSibling);
+                inputElement.classList.remove("input-box");
                 errorElement.classList.add("error");
+                inputElement.classList.add("input-error");
             } else {
                 inputElement.classList.remove("input-error");
                 errorElement.textContent = '';
             }
             inputElement.addEventListener("focus", function() {
                 inputElement.classList.remove("input-error");
+                inputElement.classList.add("input-box");
                 errorElement.textContent = '';
             });
         }
@@ -217,12 +223,12 @@ window.onload = function() {
         var data = {
             name: nameInput.value,
             lastName: lnameInput.value,
-            dni: parseInt(dniInput.value),
+            dni: dniInput.value,
             dob: convertDate(dateInput.value),
-            phone: parseInt(telInput.value),
+            phone: telInput.value,
             address: addrInput.value,
             city: locInput.value,
-            zip: parseInt(posInput.value),
+            zip: posInput.value,
             email: emailInput.value,
             password: passInput.value
         };
@@ -262,17 +268,20 @@ window.onload = function() {
         })
     }
     // Loaded data from localstorage
-    document.getElementById("nameInput").value = localStorage.getItem("name");
-    document.getElementById("lnameInput").value = localStorage.getItem("lastName");
-    document.getElementById("dniInput").value = localStorage.getItem("dni");
-    document.getElementById("dateInput").value = convertDateForm(localStorage.getItem("dob"));
-    document.getElementById("telInput").value = localStorage.getItem("phone");
-    document.getElementById("addrInput").value = localStorage.getItem("address");
-    document.getElementById("locInput").value = localStorage.getItem("city");
-    document.getElementById("posInput").value = localStorage.getItem("zip");
-    document.getElementById("emailInput").value = localStorage.getItem("email");
-    document.getElementById("passInput").value = localStorage.getItem("password");
-    document.getElementById("rpassInput").value = localStorage.getItem("password");
+    var id = localStorage.getItem("id");
+    if (id) {
+        document.getElementById("nameInput").value = localStorage.getItem("name");;
+        document.getElementById("lnameInput").value = localStorage.getItem("lastName");
+        document.getElementById("dniInput").value = localStorage.getItem("dni");
+        document.getElementById("dateInput").value = convertDateForm(localStorage.getItem("dob"));
+        document.getElementById("telInput").value = localStorage.getItem("phone");
+        document.getElementById("addrInput").value = localStorage.getItem("address");
+        document.getElementById("locInput").value = localStorage.getItem("city");
+        document.getElementById("posInput").value = localStorage.getItem("zip");
+        document.getElementById("emailInput").value = localStorage.getItem("email");
+        document.getElementById("passInput").value = localStorage.getItem("password");
+        document.getElementById("rpassInput").value = localStorage.getItem("password");
+    }
     // Register event
     document.getElementById("register").addEventListener("click", function() {
         // Valid empty fields
