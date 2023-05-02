@@ -60,6 +60,9 @@ window.onload = function() {
     validateInput(rpassInput, rpassError, validatePasswordRep, rpassMsj);
     //
     var inputs = document.getElementsByTagName("input");
+    var modal = document.getElementById("myModal");
+    var closeButton = document.getElementsByClassName("close")[0];
+    var modalMessage = document.getElementById("modalMessage");
     // -- Functions -- //
     // Contains letters
     function contLetters(inputValue){
@@ -246,13 +249,14 @@ window.onload = function() {
         })
         .then(function (data) {
             if (data.success){
-                var message = "Employee created:\n";
+                var message = '<b>Employee created:</b><br>';
                 for (var key in data.data) {
-                    message += key + ": " + data.data[key] + "\n";
+                    message += key + ": " + data.data[key] + '<br>';
                     //Save data in local storage
                     localStorage.setItem(key, data.data[key]);
                 }
-                alert(message);
+                modal.style.display = "block";
+                modalMessage.innerHTML = message;
             } else {
                 throw new Error('Login not successful');
             }
@@ -262,9 +266,10 @@ window.onload = function() {
             var errors = errorObj.errors;
             var msg = "";
             for (var i in errors) {
-                msg += errors[i].msg + "\n";
+                msg += errors[i].msg + '<br>';
             }
-            alert('Errors: \n' + msg);
+            modal.style.display = "block";
+            modalMessage.innerHTML = '<b>Errors:</b><br>' + msg;
         })
     }
     // Loaded data from localstorage
@@ -282,11 +287,16 @@ window.onload = function() {
         document.getElementById("passInput").value = localStorage.getItem("password");
         document.getElementById("rpassInput").value = localStorage.getItem("password");
     }
+    // Modal close event
+    closeButton.addEventListener("click", function() {
+        modal.style.display = "none";
+      });
     // Register event
     document.getElementById("register").addEventListener("click", function() {
         // Valid empty fields
         if (inputEmpty()) {
-            alert('* Complete the fields to enter')
+            modal.style.display = "block";
+            modalMessage.innerHTML = "* Complete the fields to enter.";
         } else {
             sendData();
         }

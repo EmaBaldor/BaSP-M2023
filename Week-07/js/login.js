@@ -3,6 +3,10 @@ window.onload = function () {
     document.getElementById("home").addEventListener("click", function () {
         window.location.href = "index.html";
     });
+    //
+    var modal = document.getElementById("myModal");
+    var closeButton = document.getElementsByClassName("close")[0];
+    var modalMessage = document.getElementById("modalMessage");
     // Valid email
     var emailInput = document.getElementById("emailInput");
     var emailError = document.createElement("div");
@@ -70,23 +74,39 @@ window.onload = function () {
             .then(function (data) {
                 // Verify that the response has data
                 if (data.success){
-                    alert();
+                    modal.style.display = "block";
+                    modalMessage.innerHTML = data.msg;
                 } else {
                     throw new Error('Login not successful');
                 }
             })
             .catch(function (error) {
                 var errorObj = JSON.parse(error.message);
-                alert(errorObj.msg);
+                var titleError = '<b>Errors:</b><br>'
+                modal.style.display = "block";
+                if (errorObj.msg) {
+                    modalMessage.innerHTML = titleError + errorObj.msg;
+                } else if (errorObj.errors) {
+                    var msg = '';
+                    for (var i in errorObj.errors) {
+                        msg += errorObj.errors[i].msg + '<br>';
+                    }
+                    modalMessage.innerHTML = titleError + msg;
+                }
             });
     }
+    // Modal close event
+    closeButton.addEventListener("click", function() {
+        modal.style.display = "none";
+        });
     // Sign-in event
     document.getElementById("sign-in").addEventListener("click", function () {
         // Valid empty fields
         if ((emailInput.value.trim().length !== 0) && (passInput.value.trim().length !== 0)) {
             sendData();
         } else {
-            alert('* Complete the fields to enter')
+            modal.style.display = "block";
+            modalMessage.innerHTML = "* Complete the fields to enter.";
         }
     });
 
