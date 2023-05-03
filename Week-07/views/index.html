@@ -154,20 +154,20 @@
                 <div class="contact-data">
                     <div id="name" class="contact">
                         <label>Name</label>
-                        <input type="text" id="nameInput" name="name" placeholder="Write here">
+                        <input type="text" id="nameInput" class="input-box" name="name" placeholder="Write here">
                     </div>
                     <div id="lname" class="contact">
                         <label>Last name</label>
-                        <input type="text" id="lnameInput" name="lname" placeholder="Write here">
+                        <input type="text" id="lnameInput" class="input-box" name="lname" placeholder="Write here">
                     </div>
                     <div id="form-email" class="contact">
                         <label>Email</label>
-                        <input type="text" id="emailInput" name="email" placeholder="Write here">
+                        <input type="text" id="emailInput" class="input-box" name="email" placeholder="Write here">
                     </div>
                 </div>
                 <div id="contact-list">
                     <label>Contact reason</label>
-                    <input type="text" list="reason" id="reasonList" name="contact" placeholder="Choose">
+                    <input type="text" list="reason" id="reasonList" class="input-box" name="contact" placeholder="Choose">
                     <datalist id="reason" >
                         <option value="I want to know about membership and cost">
                         <option value="I want to make a question or suggestion">
@@ -176,7 +176,7 @@
                 </div>
                 <div id="message">
                     <label>Message</label>
-                    <textarea id="messageInput" placeholder="Write here"></textarea>
+                    <textarea id="messageInput" class="input-box" placeholder="Write here"></textarea>
                 </div>
                 <div class="button">
                     <button type="button" id="button-clear">Clear</button>
@@ -312,6 +312,12 @@
             </ul>
         </div>
     </main>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <p id="modalMessage"></p>
+          <span class="close">&times;</span>
+        </div>
+    </div>
     <footer>
         <div class="icons">
             <a href=""><img src="../../assets/imgs/linkedin.png" alt="linkedin"></a>

@@ -42,11 +42,15 @@ window.onload = function () {
         inputElement.onblur = function () {
             var value = inputElement.value;
             var isValid = validationFunction(value);
-            if ((value !== valueInicial) && (!isValid)) {
+            if (!isValid) {
+                if (value === valueInicial) {
+                    errorElement.textContent = 'Complete the field.';
+                }else{
+                    errorElement.textContent = msj;
+                }
                 inputElement.classList.add("input-error");
                 inputElement.parentNode.insertBefore(errorElement, inputElement.nextSibling);
                 errorElement.classList.add("error");
-                errorElement.textContent = msj;
             } else {
                 inputElement.classList.remove("input-error");
                 errorElement.textContent = '';

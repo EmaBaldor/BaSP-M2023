@@ -275,7 +275,7 @@ window.onload = function() {
     // Loaded data from localstorage
     var id = localStorage.getItem("id");
     if (id) {
-        document.getElementById("nameInput").value = localStorage.getItem("name");;
+        document.getElementById("nameInput").value = localStorage.getItem("name");
         document.getElementById("lnameInput").value = localStorage.getItem("lastName");
         document.getElementById("dniInput").value = localStorage.getItem("dni");
         document.getElementById("dateInput").value = convertDateForm(localStorage.getItem("dob"));
